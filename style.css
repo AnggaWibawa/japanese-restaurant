@@ -1,0 +1,903 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* header */
+header {
+  width: 100vw;
+  height: 430px;
+  align-items: center;
+  text-align: center;
+  background-image: url(./Image/japanfood.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header .slogan {
+  align-items: center;
+  margin-top: 3em;
+  font-weight: 450;
+  font-size: 40px;
+  color: white;
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  background: none;
+}
+
+header nav .logotitle {
+  display: flex;
+  z-index: 1100;
+  position: fixed;
+  padding-left: 1em;
+}
+
+header nav .logotitle img {
+  height: 50px;
+}
+
+header nav .logotitle .judul {
+  font-size: 35px;
+  color: white;
+  text-decoration: none;
+  padding: 0.1em 0em 0.2em 0.2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header nav ul {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: right;
+  align-items: center;
+  background-color: black;
+  position: fixed;
+  padding-right: 0.5em;
+  z-index: 1000;
+}
+
+header nav ul li {
+  list-style-type: none;
+  padding: 0.3em;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.3em;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: 0.1s ease-in-out;
+}
+
+header nav ul li a:hover {
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  transition: 0.1s ease-in-out;
+}
+
+#menu,
+#tentang,
+#ikuti {
+  scroll-margin-top: 60px;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+  display: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  position: fixed; /* Set to fixed to make it stay on top */
+  top: 12px;
+  right: 10px;
+  z-index: 1400; /* Higher than navbar */
+}
+/* h-end */
+
+/* content */
+main {
+  width: 100vw;
+}
+
+/* menu */
+main #menu {
+  width: 100%;
+  height: auto;
+}
+
+main #menu .judul-menu {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 4px;
+  padding: 20px 0px 20px 0px;
+}
+
+/* card */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.card p {
+  color: #666;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+/* c-end */
+
+/* menu card */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 60px;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1500;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.menu-container.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1); /* Menjadi ukuran normal */
+}
+
+.menu-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.menu-title {
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+}
+
+.close-btn {
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  padding: 10px 20px 15px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 100%;
+  margin-left: 100%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.menucard {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0px 10px 45px 25px;
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+  opacity: 0;
+  transform: scale(0); /* Mulai dari ukuran 0 */
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.menucard img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.menucard-content {
+  padding: 15px;
+}
+
+.menucard h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.menucard p {
+  color: #666;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.menucard button {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: dodgerblue;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.menucard button:hover {
+  background-color: lightslategray;
+  transition: 0.2s ease-in-out;
+  transform: scale(1.05);
+}
+
+/* number counter */
+.int-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.counter {
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.min {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.min p {
+  color: white;
+  margin: 10px 10px 12px 11px;
+}
+
+.min:hover {
+  transform: scale(1.05);
+}
+
+.number-result {
+  width: 40px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: default;
+  overflow: hidden;
+  transition: 0.2ms ease-in-out;
+}
+
+.plus {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.plus p {
+  color: white;
+  margin: 10px 10px 12px 11px;
+}
+
+.plus:hover {
+  transform: scale(1.05);
+}
+/* nc-end */
+.menucard .warning {
+  color: red;
+  background-color: lightpink;
+  padding: 5px;
+  margin-top: 100px;
+  position: absolute;
+}
+
+.menu-container.active .menucard {
+  opacity: 1;
+  transform: scale(1); /* Menjadi ukuran normal */
+}
+
+.menu-container.active .menucard:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.menu-container.active .menucard:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.menu-container.active .menucard:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.menu-container.active .menucard:nth-child(4) {
+  transition-delay: 0.4s;
+}
+/* mc-end */
+/* m-end */
+
+/* Modal styling */
+.rating-modal {
+  display: none; /* Modal disembunyikan awalnya */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1700; /* Agar di atas elemen lain */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.rating-modal .modal-content h2 {
+  margin-left: 40px;
+}
+
+.rating-modal .modal-content .rate-paragraph {
+  max-width: 280px;
+  margin: 10px;
+}
+
+.close-modal {
+  font-size: 24px;
+  cursor: pointer;
+  float: right;
+  border-radius: 10px;
+  padding: 0px 10px 5px 10px;
+  transition: 0.1s ease-in-out;
+}
+
+.close-modal:hover {
+  background-color: #fd1d1d;
+  transition: 0.1s ease-in-out;
+}
+
+.rating-stars {
+  margin: 10px 0;
+}
+
+.star {
+  font-size: 30px;
+  cursor: pointer;
+  color: grey;
+  transition: 0.1s ease-in-out;
+}
+
+.star:hover,
+.star.selected {
+  color: gold;
+  transition: 0.1s ease-in-out;
+}
+
+/* Animasi muncul */
+.rating-modal.active {
+  display: flex;
+}
+
+#submitRating {
+  width: 50%;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  background-color: lightgray;
+  transition: 0.2s ease-in-out;
+}
+
+#submitRating:hover {
+  transition: 0.2s ease-in-out;
+  background-color: gold;
+  color: white;
+}
+/* ms-end */
+
+/* tentang */
+main #tentang {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+  background-color: black;
+  color: white;
+}
+
+main #tentang .judul-tentang {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 4px;
+  padding: 20px 0px 20px 0px;
+}
+
+main #tentang .ui-tentang {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main #tentang .ui-tentang figure .sushi {
+  height: 330px;
+  transition: 0.3s ease-in-out;
+  animation: rotate 10s linear infinite;
+  border-radius: 100%;
+  margin-left: 75px;
+  display: inline-block;
+}
+
+main #tentang .ui-tentang .art-tentang {
+  padding: 20px 0px 0px 20px;
+  max-width: 60%;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+main #tentang .ui-tentang .art-tentang .welcome {
+  font-size: 30px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+main #tentang .ui-tentang .art-tentang .thanks {
+  font-weight: 500;
+}
+
+main #tentang .ui-tentang .art-tentang .kutipan {
+  padding-top: 30px;
+}
+/* t-end */
+
+/* ikuti */
+main #ikuti {
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+  background-color: white;
+}
+
+main #ikuti .judul-ikuti {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 4px;
+  padding: 20px 0px 20px 0px;
+}
+
+main #ikuti .sosmed {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+}
+
+main #ikuti .sosmed a {
+  text-decoration: none;
+}
+
+main #ikuti .sosmed .sosmed1,
+main #ikuti .sosmed .sosmed2,
+main #ikuti .sosmed .sosmed3 {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+main #ikuti .sosmed .sosmed1 img,
+main #ikuti .sosmed .sosmed2 img,
+main #ikuti .sosmed .sosmed3 img {
+  border-radius: 0px 0px 20px 20px;
+}
+
+main #ikuti .sosmed .sosmed1 {
+  background-color: blue;
+}
+
+main #ikuti .sosmed .sosmed2 {
+  background: #833ab4;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+
+main #ikuti .sosmed .sosmed3 {
+  background-color: black;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-x-twitter {
+  padding: 10px;
+}
+
+main #ikuti .sosmed .sosmed1:hover {
+  transform: scale(1.05);
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+
+main #ikuti .sosmed .sosmed2:hover {
+  transform: scale(1.05);
+  background: none;
+  color: red;
+  border: 2px solid red;
+}
+
+main #ikuti .sosmed .sosmed3:hover {
+  transform: scale(1.05);
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+/* i-end */
+
+/* .additional-info */
+.additional-info {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.additional-info .information {
+  display: flex;
+  flex-direction: column;
+}
+
+/* contact */
+.additional-info .information .contact {
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+}
+
+.additional-info .information .contact p {
+  font-size: 35px;
+}
+
+.additional-info .information .contact .number {
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.additional-info .information .contact .number .telp,
+.additional-info .information .contact .number .telp-wa {
+  display: flex;
+  display: inline-block;
+}
+
+.additional-info .information .contact .number .telp a,
+.additional-info .information .contact .number .telp-wa a {
+  font-size: 20px;
+  margin-left: 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.additional-info .information .contact .number .telp a:hover {
+  color: blue;
+  transition: 0.2s ease-in-out;
+  text-decoration: underline;
+}
+
+.additional-info .information .contact .number .telp-wa a:hover {
+  color: blue;
+  transition: 0.2s ease-in-out;
+  text-decoration: underline;
+}
+
+.fa-circle-user {
+  font-size: 30px;
+}
+
+.fa-whatsapp {
+  font-size: 35px;
+  margin-top: 5px;
+}
+/* c-end */
+
+/* jadwal */
+.additional-info .jadwal {
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.additional-info .jadwal p {
+  font-size: 35px;
+}
+
+.additional-info .jadwal .hari {
+  margin-top: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  line-height: 50px;
+}
+
+.additional-info .jadwal .hari p {
+  font-size: 20px;
+}
+/* j-end */
+
+/* feedback */
+.additional-info .feedback .judul-feedback {
+  font-size: 35px;
+}
+
+.additional-info .feedback form {
+  margin-top: 10px;
+}
+
+.additional-info .feedback form .email,
+.additional-info .feedback form .pesan,
+.additional-info .feedback form .asal {
+  font-size: 20px;
+}
+
+.additional-info .feedback form .pesan,
+.additional-info .feedback form .asal,
+.additional-info .feedback form .kirim {
+  margin-top: 15px;
+}
+
+.additional-info .feedback form #email {
+  width: 275px;
+  height: 40px;
+  padding: 2px 5px 2px 5px;
+  overflow: hidden;
+  display: flex;
+}
+
+.additional-info .feedback form #pesan {
+  width: 275px;
+  max-width: 275px;
+  min-width: 275px;
+  height: 200px;
+  padding: 2px 5px 2px 5px;
+  overflow: hidden;
+  display: flex;
+}
+
+.additional-info .feedback form #provinsi {
+  width: 275px;
+  height: 40px;
+  padding: 2px 5px 2px 5px;
+  overflow: hidden;
+  display: flex;
+}
+
+.additional-info .feedback form #submit {
+  width: 275px;
+  height: 40px;
+  padding: 2px 5px 2px 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: dodgerblue;
+  border: none;
+  transition: 0.2s ease-in-out;
+  word-spacing: 2px;
+  cursor: pointer;
+}
+
+.additional-info .feedback form #submit:hover {
+  background-color: lightslategray;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.additional-info .feedback .quote {
+  width: 275px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+footer {
+  padding: 25px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 18px;
+  color: #444;
+}
+/* feed-end */
+/* add-end */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1080px) {
+  header .top-navbar {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: fixed;
+    z-index: 1100;
+  }
+
+  header nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50vw; /* Set width to half of the screen */
+    height: 100vh; /* Set height to full screen */
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease; /* Smooth animation from right */
+    z-index: 1300; /* Lower than the hamburger menu */
+  }
+
+  /* When the menu is active, slide it in from the right */
+  header nav ul.active {
+    right: 0;
+  }
+
+  header nav ul li {
+    margin: 20px 0;
+  }
+
+  header nav ul li a {
+    color: white;
+    font-size: 24px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  /* Overlay */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 999; /* Right behind the menu */
+  }
+
+  /* Show overlay when active */
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  main #tentang .ui-tentang {
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  main #tentang .ui-tentang .art-tentang {
+    order: 2;
+    text-align: center;
+  }
+
+  main #tentang .ui-tentang figure .sushi {
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  }
+
+  main #tentang .ui-tentang .art-tentang {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .menu-container {
+    padding-top: 0px;
+  }
+}

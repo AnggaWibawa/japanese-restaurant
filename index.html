@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Japanese Restaurant</title>
+    <link rel="shortcut icon" href="./Image/JRLogo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header id="home">
+      <!-- top navbar -->
+      <div class="top-navbar"></div>
+      <!-- tn-end -->
+
+      <!-- hamburger nav -->
+      <nav>
+        <div class="logotitle">
+          <!-- logo -->
+          <a href="#"
+            ><img src="./Image/JRLogo.png" alt="Japanese Restaurant Logo"
+          /></a>
+          <!-- l-end -->
+
+          <!-- judul -->
+          <a href="#" class="judul">Restaurant</a>
+          <!-- j-end -->
+        </div>
+        <div class="menu-icon" id="menu-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul id="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#tentang">Tentang Kami</a></li>
+          <li><a href="#ikuti">Ikuti</a></li>
+          <li><a href="signup.html" target="_blank">Sign Up</a></li>
+        </ul>
+      </nav>
+      <!-- hn-end -->
+      <h1 class="slogan">Japanese Authentic In Every Bite</h1>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+    <!-- h-end -->
+
+    <!-- content -->
+    <main>
+      <!-- menu -->
+      <section id="menu">
+        <h1 class="judul-menu">MENU</h1>
+        <!-- card -->
+        <div class="container">
+          <div class="card" data-category="appetizers">
+            <img src="./Image/takoyaki.jpg" alt="Appetizers" />
+            <div class="card-content">
+              <h2>Appetizers</h2>
+              <p>Takoyaki, Edamame, Gyoza, Agedashi Tofu</p>
+            </div>
+          </div>
+          <div class="card" data-category="main-courses">
+            <img src="./Image/ramen.jpg" alt="Main Courses" />
+            <div class="card-content">
+              <h2>Main Courses</h2>
+              <p>Ramen, Sushi, Tempura, Donburi</p>
+            </div>
+          </div>
+          <div class="card" data-category="desserts">
+            <img src="./Image/mochi.jpg" alt="Desserts" />
+            <div class="card-content">
+              <h2>Desserts</h2>
+              <p>Mochi, Dorayaki, Matcha Ice Cream, Anmitsu</p>
+            </div>
+          </div>
+          <div class="card" data-category="beverages">
+            <img src="./Image/matchalatte.jpg" alt="Beverages" />
+            <div class="card-content">
+              <h2>Beverages</h2>
+              <p>Teh Hijau, Umeshu, Soda Jepang, Matcha Latte</p>
+            </div>
+          </div>
+        </div>
+        <!-- c-end -->
+
+        <!-- menu card -->
+        <div class="menu-container hidden" data-menu="appetizers">
+          <div class="menu-header">
+            <h2 class="menu-title">Appetizers</h2>
+            <button class="close-btn">×</button>
+          </div>
+          <div class="container">
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/takoyaki.jpg" alt="Appetizers" />
+              <div class="menucard-content">
+                <h2>Takoyaki</h2>
+                <p>
+                  Bola-bola adonan gurih berisi potongan gurita, dimasak hingga
+                  renyah di luar dan lembut di dalam.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/edamame.webp" alt="Main Courses" />
+              <div class="menucard-content">
+                <h2>Edamame</h2>
+                <p>
+                  Kacang kedelai hijau segar yang direbus dan diberi sedikit
+                  garam, camilan sehat khas Jepang.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/gyoza.jpg" alt="Desserts" />
+              <div class="menucard-content">
+                <h2>Gyoza</h2>
+                <p>
+                  Pangsit Jepang berisi daging atau sayuran, dipanggang hingga
+                  renyah lalu dikukus lembut di dalam.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/agedashitofu.jpg" alt="Beverages" />
+              <div class="menucard-content">
+                <h2>Agedashi Tofu</h2>
+                <p>
+                  Tahu yang digoreng garing dan disajikan dengan saus dashi yang
+                  gurih dan taburan bonito.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-container hidden" data-menu="main-courses">
+          <div class="menu-header">
+            <h2 class="menu-title">Main Courses</h2>
+            <button class="close-btn">×</button>
+          </div>
+          <div class="container">
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/ramen.jpg" alt="Appetizers" />
+              <div class="menucard-content">
+                <h2>Ramen</h2>
+                <p>
+                  Mie Jepang dalam kaldu yang kaya rasa, disajikan dengan irisan
+                  daging, telur, dan sayuran segar.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/sushicard.webp" alt="Main Courses" />
+              <div class="menucard-content">
+                <h2>Sushi</h2>
+                <p>
+                  Kombinasi nasi cuka dengan pilihan topping ikan segar,
+                  seafood, atau sayuran yang lezat.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/tempuracard.webp" alt="Desserts" />
+              <div class="menucard-content">
+                <h2>Tempura</h2>
+                <p>
+                  Berbagai sayuran dan seafood yang digoreng renyah dalam
+                  balutan tepung tempura ringan.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/donburicard.jpg" alt="Beverages" />
+              <div class="menucard-content">
+                <h2>Donburi</h2>
+                <p>
+                  Hidangan nasi Jepang dengan topping beragam seperti ayam,
+                  daging sapi, atau ikan, disiram saus khas.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-container hidden" data-menu="desserts">
+          <div class="menu-header">
+            <h2 class="menu-title">Desserts</h2>
+            <button class="close-btn">×</button>
+          </div>
+          <div class="container">
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/mochi.jpg" alt="Appetizers" />
+              <div class="menucard-content">
+                <h2>Mochi</h2>
+                <p>
+                  Kue beras kenyal dengan isian manis yang lembut, tersedia
+                  dalam berbagai rasa tradisional.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/dorayaki.jpg" alt="Main Courses" />
+              <div class="menucard-content">
+                <h2>Dorayaki</h2>
+                <p>
+                  Kue Jepang yang terdiri dari dua pancake lembut dengan isian
+                  pasta kacang merah manis yang lezat.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/matchaicecream.jpg" alt="Desserts" />
+              <div class="menucard-content">
+                <h2>Matcha Ice Cream</h2>
+                <p>
+                  Es krim lembut beraroma matcha yang menyegarkan, dengan rasa
+                  teh hijau yang khas.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/anmitsu.jpg" alt="Beverages" />
+              <div class="menucard-content">
+                <h2>Anmitsu</h2>
+                <p>
+                  Dessert Jepang yang terdiri dari agar-agar, buah-buahan, pasta
+                  kacang merah, dan sirup manis.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-container hidden" data-menu="beverages">
+          <div class="menu-header">
+            <h2 class="menu-title">Beverages</h2>
+            <button class="close-btn">×</button>
+          </div>
+          <div class="container">
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/greentea.jpg" alt="Appetizers" />
+              <div class="menucard-content">
+                <h2>Teh Hijau</h2>
+                <p>
+                  Minuman khas Jepang yang menyegarkan, terbuat dari daun teh
+                  berkualitas tinggi yang kaya antioksidan, baik dinikmati
+                  hangat maupun dingin.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/umeshu.jpg" alt="Main Courses" />
+              <div class="menucard-content">
+                <h2>Umeshu</h2>
+                <p>
+                  Minuman manis dan asam Jepang yang terbuat dari plum yang
+                  difermentasi, memberikan rasa segar, unik, lezat, serta cocok
+                  untuk dinikmati kapan saja.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/sodajepang.jpg" alt="Desserts" />
+              <div class="menucard-content">
+                <h2>Soda Jepang</h2>
+                <p>
+                  Minuman berkarbonasi yang menyegarkan, tersedia dalam berbagai
+                  rasa buah yang khas, menarik, dan menyenangkan untuk dinikmati
+                  pada setiap kesempatan.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menucard">
+              <p class="warning">Tolong Buat Request Jumlah Pembelian!</p>
+              <img src="./Image/matchalatte.jpg" alt="Beverages" />
+              <div class="menucard-content">
+                <h2>Matcha Latte</h2>
+                <p>
+                  Kombinasi lembut dari bubuk matcha premium dengan susu yang
+                  menghasilkan minuman krimi yang kaya akan rasa teh hijau,
+                  nikmat, dan menenangkan jiwa.
+                </p>
+                <div class="int-container">
+                  <button type="submit" class="buyButton">Beli</button>
+                  <div class="counter">
+                    <div class="main">
+                      <div class="min"><p>-</p></div>
+                      <div class="number-result">0</div>
+                      <div class="plus"><p>+</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- mc-end -->
+      </section>
+      <!-- m-end -->
+
+      <!-- Modal pop-up -->
+      <div class="rating-modal" id="ratingModal">
+        <div class="modal-content">
+          <span class="close-modal" id="closeModal">&times;</span>
+          <h2>Terima Kasih!</h2>
+          <div class="rate-paragraph">
+            <p>
+              Terima kasih telah membeli dari restoran kami! Bantu kami dengan
+              memberikan rating🤩
+            </p>
+          </div>
+
+          <div class="rating-stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+          </div>
+
+          <button id="submitRating">Submit Rating</button>
+        </div>
+      </div>
+      <!-- Mp-end -->
+
+      <!-- tentang -->
+      <section id="tentang">
+        <h1 class="judul-tentang">TENTANG KAMI</h1>
+        <div class="ui-tentang">
+          <figure>
+            <img src="./Image/sushi.png" class="sushi" alt="Sushi Platter" />
+          </figure>
+          <article class="art-tentang">
+            <span class="welcome">Selamat Datang di Restaurant!</span
+            ><br />Tempat dimana anda dapat menikmati cita rasa Jepang yang
+            autentik dan berkualitas tinggi. Kami menyajikan hidangan lezat
+            seperti sushi segar dan ramen kaya rasa dalam suasana yang hangat
+            dan nyaman, memastikan setiap kunjungan Anda menjadi pengalaman yang
+            memuaskan. Kami berkomitmen untuk menghadirkan keindahan kuliner
+            Jepang langsung ke meja Anda, dengan perhatian penuh terhadap setiap
+            detail.
+            <span class="thanks">Terima Kasih telah memilih Restaurant!</span>
+            <p class="kutipan">
+              "Kami tidak sabar untuk menyambut Anda dan berbagi kelezatan
+              kami!"
+            </p>
+          </article>
+        </div>
+      </section>
+      <!-- t-end -->
+
+      <!-- ikuti -->
+      <section id="ikuti">
+        <h1 class="judul-ikuti">IKUTI</h1>
+        <div class="sosmed">
+          <a
+            href="https://www.facebook.com/profile.php?id=61563059823411"
+            target="_blank"
+            ><div class="sosmed1">
+              <i class="fa-brands fa-facebook fa-5x"></i>
+              <img src="./Image/pfb.png" alt="Facebook" /></div
+          ></a>
+          <a href="https://www.instagram.com/anggawibawaaa_/" target="_blank"
+            ><div class="sosmed2">
+              <i class="fa-brands fa-instagram fa-5x"></i>
+              <img src="./Image/pins.png" alt="Instagram" /></div
+          ></a>
+          <a href="https://x.com/anggawibawaaa" target="_blank"
+            ><div class="sosmed3">
+              <i class="fa-brands fa-x-twitter fa-5x"></i>
+              <img src="./Image/px.png" alt="Twitter" /></div
+          ></a>
+        </div>
+      </section>
+      <!-- i-end -->
+    </main>
+    <!-- c-end -->
+
+    <!-- additional-info -->
+    <section class="additional-info">
+      <!-- contact -->
+      <section class="information">
+        <section class="contact">
+          <p>Contact Person</p>
+          <div class="number">
+            <div class="telp">
+              <i class="fa-solid fa-circle-user"></i
+              ><a href="#">+62 81234567891</a>
+            </div>
+            <br />
+            <div class="telp-wa">
+              <i class="fa-brands fa-whatsapp"></i
+              ><a href="#">+62 81234567891</a>
+            </div>
+          </div>
+        </section>
+        <!-- c-end -->
+
+        <!-- jadwal -->
+        <section class="jadwal">
+          <p>Jadwal Buka</p>
+          <div class="hari">
+            <p>Senin : 07.20 AM - 22.00 PM</p>
+            <p>Selasa : 07.20 AM - 22.00 PM</p>
+            <p>Rabu : 07.40 AM - 21.00 PM</p>
+            <p>Kamis : 07.40 AM - 21.00 PM</p>
+            <p>Jumat : 07.20 AM - 22.00 PM</p>
+            <p>Sabtu : 08.00 AM - 24.00 PM</p>
+            <p>Minggu : 08.00 AM - 24.00 PM</p>
+          </div>
+        </section>
+      </section>
+      <!-- j-end -->
+
+      <!-- feedback -->
+      <section class="feedback">
+        <p class="judul-feedback">Feedback</p>
+        <form>
+          <p class="email">
+            <i class="fa-solid fa-envelope"></i>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Masukkan Email"
+              required
+            />
+          </p>
+          <p class="pesan">
+            <i class="fa-solid fa-message"></i>
+            <label for="pesan">Pesan</label>
+            <textarea
+              name="pesan"
+              id="pesan"
+              placeholder="Tuliskan Pesan..."
+              required
+            ></textarea>
+          </p>
+          <p class="asal">
+            <i class="fa-solid fa-map"></i>
+            <label for="asal">Dari Mana Kamu Berasal?</label>
+            <select name="provinsi" id="provinsi">
+              <option value="aceh">Aceh</option>
+              <option value="bali">Bali</option>
+              <option value="banten">Banten</option>
+              <option value="bengkulu">Bengkulu</option>
+              <option value="di_yogyakarta">DI Yogyakarta</option>
+              <option value="dki_jakarta">DKI Jakarta</option>
+              <option value="gorontalo">Gorontalo</option>
+              <option value="jambi">Jambi</option>
+              <option value="jawa_barat">Jawa Barat</option>
+              <option value="jawa_tengah">Jawa Tengah</option>
+              <option value="jawa_timur">Jawa Timur</option>
+              <option value="kalimantan_barat">Kalimantan Barat</option>
+              <option value="kalimantan_selatan">Kalimantan Selatan</option>
+              <option value="kalimantan_tengah">Kalimantan Tengah</option>
+              <option value="kalimantan_timur">Kalimantan Timur</option>
+              <option value="kalimantan_utara">Kalimantan Utara</option>
+              <option value="kepulauan_bangka_belitung">
+                Kepulauan Bangka Belitung
+              </option>
+              <option value="kepulauan_riau">Kepulauan Riau</option>
+              <option value="lampung">Lampung</option>
+              <option value="maluku">Maluku</option>
+              <option value="maluku_utara">Maluku Utara</option>
+              <option value="nusa_tenggara_barat">Nusa Tenggara Barat</option>
+              <option value="nusa_tenggara_timur">Nusa Tenggara Timur</option>
+              <option value="papua">Papua</option>
+              <option value="papua_barat">Papua Barat</option>
+              <option value="papua_pegunungan">Papua Pegunungan</option>
+              <option value="papua_selatan">Papua Selatan</option>
+              <option value="papua_tengah">Papua Tengah</option>
+              <option value="riau">Riau</option>
+              <option value="sulawesi_barat">Sulawesi Barat</option>
+              <option value="sulawesi_selatan">Sulawesi Selatan</option>
+              <option value="sulawesi_tengah">Sulawesi Tengah</option>
+              <option value="sulawesi_tenggara">Sulawesi Tenggara</option>
+              <option value="sulawesi_utara">Sulawesi Utara</option>
+              <option value="sumatera_barat">Sumatera Barat</option>
+              <option value="sumatera_selatan">Sumatera Selatan</option>
+              <option value="sumatera_utara">Sumatera Utara</option>
+            </select>
+          </p>
+          <p class="kirim">
+            <button type="submit" id="submit">
+              Kirim<i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </p>
+        </form>
+        <div class="quote">
+          <p>
+            <q
+              >Kami menghargai setiap feedback Anda untuk terus meningkatkan
+              kualitas dan rasa autentik hidangan Jepang kami.</q
+            >
+          </p>
+        </div>
+      </section>
+      <!-- feed-end -->
+    </section>
+    <!-- add-end -->
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2024 Japanese Restaurant. All rights reserved.</p>
+    </footer>
+    <!-- f-end -->
+    <script
+      src="https://kit.fontawesome.com/905837596a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

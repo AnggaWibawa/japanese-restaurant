@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./Image/japanesefood.jpg);
+  background-position: center;
+}
+
+form {
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  padding: 15px;
+  color: white;
+}
+
+form h1 {
+  text-align: center;
+}
+
+form .signin {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+form .signin .email,
+form .signin .password,
+form .signin .forgot,
+form .signin footer {
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+
+form .signin .email #email,
+form .signin .password #password {
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  padding: 2px;
+}
+
+form .signin .forgot {
+  font-size: 13.5px;
+  color: #999;
+}
+
+form .signin .forgot a {
+  text-decoration: none;
+}
+
+form .signin .forgot a:visited {
+  color: blue;
+}
+
+form .signin button {
+  margin: 8px;
+  padding: 2px;
+  width: 21.4em;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: dodgerblue;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+form .signin button:hover {
+  transition: 0.2s ease-in-out;
+  background-color: lightslategray;
+}
+
+form .signin footer p {
+  font-size: 13.5px;
+  color: #999;
+}
